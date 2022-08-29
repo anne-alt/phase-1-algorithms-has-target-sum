@@ -1,9 +1,25 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let sums = [];
+    
+    for (let i = 0; i < array.length; i++) {
+    for (let j= i+1; j< array.length; j++) {
+    if (array[i] + array[j] === target){
+    sums.push([array[i], array[j]])
+    return true
+    } 
+   }
+  }
+  if (sums === target) {
+    return true
+} else {
+    return false
+}
 }
 
 /* 
   Write the Big O time complexity of your function here
+  0(n^2)
 */
 
 /* 
